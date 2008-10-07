@@ -1,24 +1,43 @@
-
 <% content_for :header do %>
-  <div class="maintitle"><%=h @match.local.name %> <%=h @match.local_score %> - <%=h @match.visitor_score %> <%=h @match.visitor.name %></div>
+  <div class="maintitle"><%=h match_result @match %></div>
   <div class="mainsubtitle"><%=h @match.match_date %></div>
 <% end %>
 
-<div class="mainarea_main_bar">
+<div class="col_50_50 clearfix">
 
-    <div class="titleA">Notas del partido</div>
-    <br />
-
-    <table>
-      <% for note in @match.notes%>
-        <tr>
-          <td><strong><%=h note.minute %>'</strong> - </td>
-          <td><%=h note.description %></td>
+  <div class="left_col">
+    <div class="titleA"> <%= @match.local.name %></div>
+    <ul>
+      <% for goal in @match.local_goals%>
+        <li><strong><%=h goal.minute %>'</strong> - <%=h goal.player %></li>
         </tr>
       <% end %>
-    </table>
+    </ul>
+  </div> <!-- /.left_col -->
+  
+  <div class="right_col">
+    <div class="titleA"> <%= @match.visitor.name %></div>
+    <ul>
+      <% for goal in @match.visitor_goals%>
+        <li><strong><%=h goal.minute %>'</strong> - <%=h goal.player %></li>
+        </tr>
+      <% end %>
+    </ul>
+  </div> <!-- /.right_col -->
+</div>
 
-    <hr class="wide" />
-    <br />
+<div class="titleA">Notas del partido</div>
+<br />
 
-</div> <!-- /#mainarea_main_bar -->
+<table>
+  <% for note in @match.notes%>
+    <tr>
+      <td><strong><%=h note.minute %>'</strong> - </td>
+      <td><%=h note.description %></td>
+    </tr>
+  <% end %>
+</table>
+
+<hr class="wide" />
+<br />
+

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  match_id: 1
+  player: MyString
+  minute: 1
+
+two:
+  match_id: 1
+  player: MyString
+  minute: 1

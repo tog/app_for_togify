@@ -13,9 +13,7 @@
   <table>
     <% for match in mds[match_day] %>
       <tr>
-        <td><%=h match.local.name %> </td>
-        <td><%=h match.local_score %> - <%=h match.visitor_score %></td>
-        <td><%=h match.visitor.name %></td>
+        <td><%=h match_result match %></td>
         <td><%= link_to 'Show', match %></td>
       </tr>
     <% end %>

@@ -1,18 +1,14 @@
-<p>
-  <b>Name:</b>
-  <%=h @team.name %>
-</p>
+<% content_for :header do %>
+  <div class="maintitle"><%=h @team.name %></div>
+<% end %>
+
+
+<div class="titleA">Description</div>
+<br />
 
 <p>
-  <b>Description:</b>
   <%=h @team.description %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%=h @team.user_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+<hr class="wide" />
+<br />
