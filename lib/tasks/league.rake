@@ -27,6 +27,7 @@ def create_user(name, admin=false)
   user = User.new 
   user.login = name.downcase
   user.name = name
+  user.email = "#{user.login}@#{user.login}.com"
   user.password = user.password_confirmation = user.login
   user.register! && user.activate!
   user

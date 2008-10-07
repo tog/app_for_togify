@@ -3,10 +3,35 @@
   <div class="mainsubtitle"><%=h @match.match_date %></div>
 <% end %>
 
+<% content_for :sidebar do %>
+  <br/>
+  <div class="module moduleE moduleE2" id="module_similarAreaFlats">
+    <div class="module_title">Otros partidos de la jornada</div>
+    <div class="module_content">
+      <table class="tableA">
+          <tr>
+              <th scope="col">Partido</th>
+              <th scope="col" class="right">Resultado</th>
+          </tr>
+          <% for match in matches_on_same_day(@match) %>
+            <tr>
+                <td><strong><%= link_to match.local.name, team_path(match.local) %> - <%=link_to match.visitor.name, team_path(match.visitor) %></strong></td>
+                <td class="right"><%= link_to "#{match.local_score} - #{match.visitor_score}" , match_path(match) %></td>
+            </tr>
+          <% end %>
+      </table>
+  
+    <div class="more right"><%= link_to "Ver todos...", matches_path %></div>
+    </div>
+  </div> <!-- .moduleD -->
+  <br/>
+  <%= image_tag "layout.png" %>
+<% end %>
+<br/>
+<br/>
 <div class="col_50_50 clearfix">
-
   <div class="left_col">
-    <div class="titleA"> <%= @match.local.name %></div>
+    <div class="titleA"> <%= link_to @match.local.name, team_path(@match.local) %></div>
     <ul>
       <% for goal in @match.local_goals%>
         <li><strong><%=h goal.minute %>'</strong> - <%=h goal.player %></li>
@@ -14,9 +39,9 @@
       <% end %>
     </ul>
   </div> <!-- /.left_col -->
-  
+
   <div class="right_col">
-    <div class="titleA"> <%= @match.visitor.name %></div>
+    <div class="titleA"> <%= link_to @match.visitor.name, team_path(@match.visitor) %></div>
     <ul>
       <% for goal in @match.visitor_goals%>
         <li><strong><%=h goal.minute %>'</strong> - <%=h goal.player %></li>
@@ -25,7 +50,8 @@
     </ul>
   </div> <!-- /.right_col -->
 </div>
-
+<br/>
+<br/>
 <div class="titleA">Notas del partido</div>
 <br />
 

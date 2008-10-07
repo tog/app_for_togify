@@ -48,20 +48,20 @@
                         <div class="titulo"><%= current_user.login %></div>
                     </div>
                     <ul class="clearfix">
-                      <li class="bookmarks"><%= link_to  content_tag(:span, "Log out"), logout_path, { :title => "Log out" } %></li>
+                      <li class="bookmarks"><%= link_to  content_tag(:span, "Cerrar sesión"), logout_path, { :title => "Log out" } %></li>
                     </ul>
                   <% else -%>
                     <div class="user_info clearfix">
                         <div class="titulo">Not logged in</div>
                     </div>
                     <ul class="clearfix">
-                      <li class="bookmarks"><%= link_to content_tag(:span, "Log in"),  login_path,  { :title=> "Log in" } %></li>
-                      <li class="bookmarks"><%= link_to content_tag(:span, "Sign up"), signup_path, { :title => "Create an account" } %></li>
+                      <li class="bookmarks"><%= link_to content_tag(:span, "Iniciar sesión"),  login_path,  { :title=> "Log in" } %></li>
+                      <li class="bookmarks"><%= link_to content_tag(:span, "Registrarse"), signup_path, { :title => "Create an account" } %></li>
                     </ul>
                   <% end -%>
                   <ul class="clearfix">
-                    <li class="bookmarks"><%= link_to content_tag(:span, "Matches"), matches_path %></li>
-                    <li class="bookmarks"><%= link_to content_tag(:span, "Teams"), teams_path %></li>
+                    <li class="bookmarks"><%= link_to content_tag(:span, "Partidos"), matches_path %></li>
+                    <li class="bookmarks"><%= link_to content_tag(:span, "Equipos"), teams_path %></li>
                   </ul>
                 </div>
             </div> <!-- /#side_bar -->

@@ -2,6 +2,43 @@
   <div class="maintitle"><%=h @team.name %></div>
 <% end %>
 
+<% content_for :sidebar do %>
+
+  <div class="module moduleE moduleE2" id="module_servicesAvailables">
+    <div class="module_title">Partidos jugados en casa</div>
+    <div class="module_content">
+      <table class="tableA">
+          <tr>
+              <th scope="col">Partido</th>
+              <th scope="col" class="right">Resultado</th>
+          </tr>
+          <% for match in @team.local_matches %>
+            <tr>
+                <td><strong><%= link_to match.local.name, team_path(match.local) %> - <%=link_to match.visitor.name, team_path(match.visitor) %></strong></td>
+                <td class="right"><%= link_to "#{match.local_score} - #{match.visitor_score}" , match_path(match) %></td>
+            </tr>
+          <% end %>
+      </table>
+  </div> <!-- .moduleD -->
+  <br/>
+  <div class="module moduleE" id="module_servicesAvailables">
+    <div class="module_title">Partidos jugados fuera</div>
+    <div class="module_content">
+      <table class="tableA">
+          <tr>
+              <th scope="col">Partido</th>
+              <th scope="col" class="right">Resultado</th>
+          </tr>
+          <% for match in @team.visitor_matches %>
+            <tr>
+                <td><strong><%= link_to match.local.name, team_path(match.local) %> - <%=link_to match.visitor.name, team_path(match.visitor) %></strong></td>
+                <td class="right"><%= link_to "#{match.local_score} - #{match.visitor_score}" , match_path(match) %></td>
+            </tr>
+          <% end %>
+      </table>
+  </div> <!-- .moduleD -->
+  <br/>
+<% end %>
 
 <div class="titleA">Description</div>
 <br />
