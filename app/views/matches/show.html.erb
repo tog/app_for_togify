@@ -12,7 +12,7 @@
     <table>
       <% for note in @match.notes%>
         <tr>
-          <td><%=h note.minute %>' </td>
+          <td><strong><%=h note.minute %>'</strong> - </td>
           <td><%=h note.description %></td>
         </tr>
       <% end %>

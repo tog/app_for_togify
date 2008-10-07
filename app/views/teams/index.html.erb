@@ -3,16 +3,13 @@
   <div class="mainsubtitle">La liga este año esta que arde...</div>
 <% end %>
 
-<div class="mainarea_main_bar">
+<% for team in @teams %>
+  <div class="titleA"><%=h team.name %></div>
+  <br/>
+  <p><%= team.description %></p>
+  <%= link_to "More #{team.name}...", team %>
+  <hr class="wide" />
+  <br />
 
-  <% for team in @teams %>
-    <div class="titleA"><%=h team.name %></div>
-    <br/>
-    <p><%= team.description %></p>
-    <%= link_to "More #{team.name}...", team %>
-    <hr class="wide" />
-    <br />
+<% end %>
 
-  <% end %>
-
-</div> <!-- /#mainarea_main_bar -->
