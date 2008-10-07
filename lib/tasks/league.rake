@@ -7,6 +7,7 @@ namespace :league do
     task :rebuild => :environment do
       create_teams
       create_matches
+      create_user('test_admin', true)
     end
   end
 end
@@ -15,13 +16,13 @@ def create_teams
   Team.delete :all
   STD_TEAMS.each{|name|
     User.delete_all "login = '#{name.downcase}'"
-    user = create_team_user(name)
+    user = create_user(name)
     Team.create :name => name, :description => "This should be a real description", :user => user
     
   }
 end
 
-def create_team_user(name)
+def create_user(name, admin=false)
   user = User.new 
   user.login = name.downcase
   user.name = name
@@ -48,6 +49,7 @@ def create_a_few_notes_on_match(match)
     match.notes.create(:minute => rand_within(0...90), :description => "This should be a real note about the match")
   end
 end
+
 
 def team(name)
   Team.find_by_name(name)

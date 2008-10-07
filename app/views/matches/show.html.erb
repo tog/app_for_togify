@@ -4,9 +4,21 @@
   <div class="mainsubtitle"><%=h @match.match_date %></div>
 <% end %>
 
+<div class="mainarea_main_bar">
 
+    <div class="titleA">Notas del partido</div>
+    <br />
 
-<table>
-    <tr>
-    </tr>
-</table>
+    <table>
+      <% for note in @match.notes%>
+        <tr>
+          <td><%=h note.minute %>' </td>
+          <td><%=h note.description %></td>
+        </tr>
+      <% end %>
+    </table>
+
+    <hr class="wide" />
+    <br />
+
+</div> <!-- /#mainarea_main_bar -->

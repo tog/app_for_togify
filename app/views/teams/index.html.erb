@@ -1,24 +1,18 @@
-<h1>Listing teams</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>User</th>
-  </tr>
-
-<% for team in @teams %>
-  <tr>
-    <td><%=h team.name %></td>
-    <td><%=h team.description %></td>
-    <td><%=h team.user_id %></td>
-    <td><%= link_to 'Show', team %></td>
-    <td><%= link_to 'Edit', edit_team_path(team) %></td>
-    <td><%= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% content_for :header do %>
+  <div class="maintitle">Los equipos</div>
+  <div class="mainsubtitle">La liga este año esta que arde...</div>
 <% end %>
-</table>
 
-<br />
+<div class="mainarea_main_bar">
 
-<%= link_to 'New team', new_team_path %>
+  <% for team in @teams %>
+    <div class="titleA"><%=h team.name %></div>
+    <br/>
+    <p><%= team.description %></p>
+    <%= link_to "More #{team.name}...", team %>
+    <hr class="wide" />
+    <br />
+
+  <% end %>
+
+</div> <!-- /#mainarea_main_bar -->
