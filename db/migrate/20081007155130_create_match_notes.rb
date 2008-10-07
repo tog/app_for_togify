@@ -3,7 +3,8 @@ class CreateMatchNotes < ActiveRecord::Migration
     create_table :match_notes do |t|
       t.integer :minute
       t.text :description
-
+      t.integer :match_id
+      
       t.timestamps
     end
   end

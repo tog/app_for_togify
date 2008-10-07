@@ -38,10 +38,20 @@ def create_matches
   weeks.each_pair{|d_day, matches|
     matches.each {|match|
       local, visitor = match.split '-'
-      Match.create :match_day => d_day.to_date, :local => team(local), :visitor => team(visitor)
+      m = Match.create :match_day => d_day.to_date, :local => team(local), :visitor => team(visitor)
+      create_a_few_notes_on_match(m)
     }
   }
 end
+def create_a_few_notes_on_match(match)
+  rand_within(1...15).times do
+    match.notes.create(:minute => rand_within(0...90), :description => "This should be a real note about the match")
+  end
+end
+
 def team(name)
   Team.find_by_name(name)
+end
+def rand_within(range)
+  rand(range.max - range.min) + range.min
 end
