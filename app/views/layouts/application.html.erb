@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tog test app</title>
+<meta name="language" content="es" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="title" content="Tog test app"/>
+<meta name="title" content="Tog test app" />
+<meta name="description" content="XXXXX XXXX XXXX" />
+<meta name="keywords" content="xxx, xxxxxx, xxxx" />
+<meta name="author" content="Linking Paths" />
+
+<link rel="icon" href="../trunk/public/images/favicon.ico" />
+
+<link href="/stylesheets/application.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/stylesheets/style.css" rel="stylesheet" media="screen" type="text/css" />
+
+<!--[if lt IE 7.]>
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/ie6.css" />
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/ie7.css" />
+<![endif]-->
+
+<link rel="start" type="text/html" href="/" title="Página de inicio" />
+
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header" class="clearfix">
+            <div id="header_content">
+
+
+            </div> <!-- /#header_content -->
+        </div>  <!-- /#header -->
+
+
+
+
+
+        <div id="pagebody" class="clearfix">
+            <div id="side_bar">
+                <div id="user_menu">
+                  <% if logged_in? -%>
+                    <div class="user_info clearfix">
+                        <div class="titulo"><%= current_user.login %></div>
+                    </div>
+                    <ul class="clearfix">
+                      <li class="bookmarks"><a href="#"><span>Mis favoritos</span></a></li>
+                      <li class="bookmarks"><span><%= link_to  content_tag(:span, "Log out"), logout_path, { :title => "Log out" } %></span></li>
+                    </ul>
+                  <% else -%>
+                    <div class="user_info clearfix">
+                        <div class="titulo">Not logged in</div>
+                    </div>
+                    <ul class="clearfix">
+                      <li class="bookmarks"><span><%= link_to content_tag(:span, "Log in"),  login_path,  { :title=> "Log in" } %></span></li>
+                      <li class="bookmarks"><span><%= link_to content_tag(:span, "Sign up"), signup_path, { :title => "Create an account" } %></span></li>
+                    </ul>
+                  <% end -%>
+                </div>
+            </div> <!-- /#side_bar -->
+
+
+            <div id="mainarea" class="clearfix">
+                <div id="mainarea_content">
+                    <div id="mainarea_header" class="clearfix">
+                        <%= yield :header %>
+                        <br/>
+                    </div> <!-- /#pagebody_header -->
+                    <div class="mainarea_mailcols clearfix">
+                      <%= yield %>
+                        <div class="mainarea_sidebar">
+                          <%= yield :sidebar %>
+                        </div> <!-- /.mainarea_sidebar -->
+                    </div> <!-- .mainarea_mailcols -->
+                </div> <!-- /#mainarea_content -->
+            </div> <!-- /#mainarea -->
+
+
+        </div>  <!-- /#pagebody -->
+
+
+        <div id="footer">
+
+        </div>  <!-- /#footer -->
+
+
+
+    </div> <!-- #container -->
+</body>
+</html>

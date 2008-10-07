@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  week: 1
+  local_team_id: 1
+  foreign_team_id: 1
+  local_score: 1
+  foreign_score: 1
+
+two:
+  week: 1
+  local_team_id: 1
+  foreign_team_id: 1
+  local_score: 1
+  foreign_score: 1

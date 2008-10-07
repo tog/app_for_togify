@@ -1,0 +1,34 @@
+<% content_for :header do %>
+  <div class="maintitle">Proximos partidos</div>
+  <div class="mainsubtitle">La liga este año esta que arde...</div>
+<% end %>
+
+
+
+<div class="mainarea_main_bar">
+
+  <% mds = @matches.group_by(&:match_date) %>
+
+  <% for match_day in mds.keys %>
+    <div class="titleA"><%=h match_day %></div>
+    <br />
+
+    <table>
+      <% for match in mds[match_day] %>
+        <tr>
+          <td><%=h match.local.name %> </td>
+          <td><%=h match.local_score %> - <%=h match.visitor_score %></td>
+          <td><%=h match.visitor.name %></td>
+          <td><%= link_to 'Show', match %></td>
+        </tr>
+      <% end %>
+    </table>
+
+    <hr class="wide" />
+    <br />
+
+
+
+  <% end %>
+
+</div> <!-- /#mainarea_main_bar -->

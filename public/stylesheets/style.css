@@ -1,0 +1,326 @@
+/*
+general
+detail
+module
+list
+table
+col
+*/
+
+
+
+/* general */
+.fontbigger {font-size: 1.1em;}
+.fontsmaller {font-size: 0.9em;}
+.fontsmaller.xs {font-size: 0.85em;}
+.right { text-align: right; }
+.left { text-align: left; }
+.center { text-align: center; }
+.justify { text-align: justify; }
+.float_left {float: left; display:inline;}
+.float_right {float: right; display:inline;}
+
+.person, .datetime, .highlight {
+    color: #396;
+    background-color: transparent;
+}
+.person_summary {
+    font-weight: bold;
+    color: #ff821b;
+    background-color: transparent;    
+}
+.empty {
+    font-style: italic;
+}
+.titleA {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+a.link_action {
+    color: #555;
+    background-color: transparent;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+    line-height: 1.8em;
+}
+a.link_action:hover {
+    color: #396;
+    background-color: transparent;
+}
+a.link_action.send {background-image: url(../images/ico/mail.gif);}
+a.link_action.report_abuse {background-image: url(../images/ico/flag.gif);}
+
+
+
+/* detail*/
+.detail .title {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin: 0 0 0.4em 0;
+}
+.detail .subtitle {
+    font-weight: bold;
+    color: #ff821b;
+    background-color: transparent;
+}
+
+    /* */
+    .detailA .image {
+        float: left;
+        display: inline;
+        margin: 0 15px 7px 0;
+    }
+    .detailA .text {
+        clear: both;
+        padding-top: 0.6em;
+    }
+
+
+
+/* module */
+.module {
+}
+
+    /* */
+    .moduleA {
+        background: #feffdf;
+        color: inherit;
+        border: 1px solid #fcf253;
+        padding: 15px;
+    }
+    .moduleA .module_title {
+        font-size: 1.7em;
+        font-weight: bold;
+        color: #ff821b;
+        background-color: transparent;
+        line-height: 1em;  
+        margin-bottom: 0.5em;    
+    }
+    .moduleA .note {
+        color: #999;
+        background-color: transparent;
+    }
+    .moduleA .module_title .note {
+        font-size: 0.7em;
+    }
+    .moduleA ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .moduleA li {
+        border-top: 1px dotted #555;
+        padding: 5px 0;
+    }
+    .moduleA li.last {
+        padding-bottom: 0;
+    }
+    
+    /* */
+    .moduleB .module_title, .moduleD .module_title {
+        background: #e45a83 url(../images/sharp/sharp-pink.gif) no-repeat 50% 100%;
+        color: #fff;
+        padding: 5px 5px 15px 5px;
+    }
+    .moduleB .module_content {
+        padding: 0 5px;
+    }
+    .moduleB ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .moduleB li {
+        padding: 2px 0;
+        margin: 0.3em 0;
+    }
+    .moduleB li a {
+        padding: 2px 0 2px 22px;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        text-decoration: none;
+    }
+    .moduleB li a.tuenti {background-image: url(../images/ico/tuenti.gif);}
+    .moduleB li a.hi5 {background-image: url(../images/ico/hi5.gif);}
+    .moduleB li a.weblog {background-image: url(../images/ico/weblog.gif);}
+    
+    /* */
+    .moduleC .module_title {
+        background: #22a09c url(../images/sharp/sharp-green.gif) no-repeat 50% 100%;
+        color: #fff;
+        padding: 5px 5px 15px 5px;
+    }
+    .moduleC .module_content {
+        padding: 0 5px;
+    }
+    .moduleC ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-weight: bold;
+    }
+    .moduleC li {
+        margin: 0 0 10px 0;
+        padding: 0 0 10px 60px;
+        background: url(../images/dotted-h.gif) repeat-x 0 100%;
+    }
+    .moduleC .image {
+        float: left;
+        display: inline;
+        margin: 0 0 0 -60px;
+    }
+    .moduleC .text {
+        line-height: 1.5em;
+    }
+    
+    /**/
+    .moduleD .text {
+        color: #396;
+        background-color: transparent;      
+        font-weight: bold;  
+        margin: 0.3em 0;
+    }
+    .moduleD .map {
+        border: 1px solid #aaa;
+    }
+
+    /* */
+    .moduleE .module_title {
+        background: #bad900 url(../images/sharp/sharp-lima.gif) no-repeat 50% 0%;
+        color: #fff;
+        padding: 15px 5px 5px 5px;
+    }
+    .moduleE.moduleE2 .module_title {
+        background-image: url(../images/sharp/sharp-green.gif);
+        background-position: 50% 100%;
+        background-color: #22a09c;
+        color: #fff;
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+
+    .moduleE .module_content {
+        font-size: 0.85em;
+    }
+    .moduleE .more {
+        margin: 0.5em 5px 0 0;
+    }
+
+
+    
+/* list */
+ul.listA {
+    margin: 0 0 0 -1px;
+    padding: 0;
+    list-style-type: none;
+}
+ul.listA li {
+    float: left;
+    display: inline;
+    margin: 0 0 1px 1px;
+}
+/**/
+ul.listB {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 2px solid #aaa;
+}
+ul.listB li {
+    padding: 8px;
+    border-bottom: 1px solid #fff;
+}
+ul.listB li.pair {
+    background: #e9e9e9;
+    color: inherit;
+}
+/**/
+ul.listC {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+ul.listC li {
+    padding: 0 0 15px 120px;
+    margin: 0 0 10px 0;
+    background: url(../images/dotted-h.gif) repeat-x 0 100%;
+}
+ul.listC .image {
+    float: left;
+    display: inline;
+    margin: 0 0 0 -120px;
+}
+ul.listC .person_summary {
+    margin: 0.6em 0;
+}
+ul.listC .more {
+    margin: 0.6em 0 0 0;
+    text-align: right;
+}
+/**/
+ul.listD {
+    margin: 0 0 0 -14px;
+    padding: 0;
+    list-style-type: none;
+}
+ul.listD li {
+    float: left;
+    display: inline;
+    margin: 0 0 14px 14px;
+}
+/**/
+ul.listE {
+    margin: 0 0 0 -21px;
+    padding: 0;
+    list-style-type: none;
+}
+ul.listE li {
+    float: left;
+    display: inline;
+    width: 100px;
+    text-align:center;
+    margin: 0 0 0 21px;
+    padding: 0 0 21px 0;
+}
+
+
+
+    
+/* table */
+.tableA {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tableA th, .tableA td {
+    padding: 5px;
+}
+.tableA th {
+    font-weight: normal;
+}
+.tableA strong {
+    color: #396;
+    background-color: transparent;
+}
+.tableA tr {
+    background: url(../images/dotted-h.gif) repeat-x 0 100%;
+}
+
+
+    
+/* col */
+.col_50_50 {
+    clear: both;
+    width: 100%;
+}
+    .col_50_50 .left_col {
+        float: left;
+        display: inline;
+        width: 49%;
+    }
+    .col_50_50 .right_col {
+        float: right;
+        display: inline;
+        width: 49%;
+    }

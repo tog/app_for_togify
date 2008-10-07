@@ -1,0 +1,32 @@
+<h1>Editing match</h1>
+
+<% form_for(@match) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :week %><br />
+    <%= f.text_field :week %>
+  </p>
+  <p>
+    <%= f.label :local_team_id %><br />
+    <%= f.text_field :local_team_id %>
+  </p>
+  <p>
+    <%= f.label :foreign_team_id %><br />
+    <%= f.text_field :foreign_team_id %>
+  </p>
+  <p>
+    <%= f.label :local_score %><br />
+    <%= f.text_field :local_score %>
+  </p>
+  <p>
+    <%= f.label :foreign_score %><br />
+    <%= f.text_field :foreign_score %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @match %> |
+<%= link_to 'Back', matches_path %>

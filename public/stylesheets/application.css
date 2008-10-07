@@ -1,0 +1,196 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.hidden {
+    position: absolute;
+    top: -99999px;
+    left: -999999px;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+form { margin: 0; padding: 0; }
+p { margin: 0; padding: 0 0 1em 0; }
+a { color:#396; background-color: transparent;}
+a:hover { color: #396; background-color: transparent;}
+a img { border: 0; }
+img { vertical-align: middle;}
+input, select, textarea {font-size: 1em; font-family: Arial, Helvetica, sans-serif; vertical-align: middle;}
+hr {margin:0; padding: 0; height: 1px; border: 0; background: url(../images/dotted-h.gif) repeat-x 0 0;}
+table {font-size: 1em;}
+
+
+body {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #fff ;
+    color: #555;
+}
+
+#container {
+    text-align: left;
+    font: normal 0.8em/1.2em Arial, Helvetica, sans-serif;
+    width: 1000px;
+    min-width: 768px;
+    margin: 0 auto;
+}
+
+#header {
+}
+ 
+    
+#pagebody {
+    background: #ddd;
+    color: inherit;
+    padding: 20px;
+}
+
+    #side_bar {
+        float: left;
+        display: inline;
+        width: 19%;
+        border: 1px solid #aaa;
+        background: #fff;
+        color: inherit;
+    }
+
+    #mainarea {
+        float: right;
+        display: inline;
+        width: 75.5%;
+        border: 1px solid #aaa;
+        background: #fff;
+        color: inherit;
+        padding: 15px;
+    }
+    .mainarea_sidebar {
+        float: right;
+        display: inline;
+        width: 32%;
+    }
+    .mainarea_main_bar {
+        float: left;
+        display: inline;
+        width: 64%;
+    }
+    
+    /* */
+    #user_menu .user_info {
+        padding: 15px;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #000;
+        background-color: transparent;
+    }
+    #user_menu .image {
+        float: left;
+        display: inline;
+        margin: 0 15px 0 0;   
+    }
+
+    #user_menu ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    #user_menu li {
+        border-top: 1px solid #aaa;
+        font-weight: bold;
+        font-size: 1.2em;
+    }    
+    #user_menu a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+        background-color: #fbfbfb;
+        background-repeat:  no-repeat;
+        background-position: 15px 50%;
+    }
+    #user_menu a:hover {
+        color: #396;
+        background-color: #fff;
+    }
+    #user_menu a span {
+        display: block;
+        padding: 10px 15px 10px 60px;
+    }
+    #user_menu li.bookmarks a { background-image: url(../images/ico/love.gif); }
+    #user_menu li.messages a { background-image: url(../images/ico/mails.gif); }
+    #user_menu li.suggests a { background-image: url(../images/ico/mails.gif); }
+    
+    /**/
+    #mainarea_header {
+        margin: -15px -15px 15px -15px !important;
+        padding: 15px 15px 0 15px;
+        background: #f9f9f9 url(../images/solid-h.gif) repeat-x 0 100%;
+        color: inherit;
+        /*border-bottom: 1px solid #aaa;*/
+    }
+        #mainarea_header .ico {
+            float: right;
+            display: inline;
+        }
+        #mainarea_header .maintitle {
+            font-size: 1.7em;
+            font-weight: bold;
+            margin: 0 0 0.2em 0;
+        }
+        #mainarea_header .mainsubtitle {
+            font-size: 1.1em;
+            font-weight: bold;
+            background-color: transparent;
+            color: #aaa;
+        }
+    
+    /* */
+    #menu {
+        margin: 20px 0 0 0;
+        position: relative;
+    }
+        #menu ul {
+           margin: 0;
+           padding: 0;
+           list-style-type: none;
+        }
+        #menu li {
+            float: left;
+            display: inline;
+            font-size: 0.9em;
+            margin-right: 5px;
+        }        
+
+        #menu a {
+            text-decoration: none;
+            display: block;
+            border: 1px solid #aaa;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+            -moz-border-radius: 5px 5px 0 0;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+        }
+        #menu a span {
+            display: block;
+            text-align: center;
+            min-width: 100px;
+            padding: 3px 10px;
+
+        }
+        #menu a:hover{
+            border-color: #000;
+            border-bottom: 1px solid #fff;
+            background: #fff;
+            color: #555;
+        }
+
+#footer {
+}
