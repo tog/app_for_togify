@@ -6,4 +6,11 @@ module ApplicationHelper
   def matches_on_same_day(match)
     Match.find(:all, :conditions => {:match_day => match.match_day}) - [match]
   end
+  
+  def render_flash_messages
+    flash.collect{|entry|
+      content_tag(:div, entry[1], :class => "notice #{entry[0]}")
+    }
+  end
+  
 end

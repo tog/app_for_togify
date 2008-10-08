@@ -194,3 +194,31 @@ body {
 
 #footer {
 }
+
+.notice {
+    color: #666;
+    background-color: #edf3fd;
+    padding: 8px 40px;
+    margin: 1em -12px;
+    font-size: 1.1em;
+    border-top: 1px solid #b2c7df;
+    border-bottom: 1px solid #b2c7df;
+}
+    .notice.ok {
+        color: #666;
+        background: #edffe1 url(../images/ico/ok.gif) no-repeat 15px 0.9em;
+        border-top: 1px solid #bdd8bd;
+        border-bottom: 1px solid #bdd8bd;
+    }
+    .notice.warning {
+        color: #666;
+        background: #fdffcb url(../images/ico/warning.gif) no-repeat 15px 0.9em;
+        border-top: 1px solid #fcd41d;
+        border-bottom: 1px solid #fcd41d;
+    }
+    .notice.error {
+        color: #666;
+        background: #ffebe2 url(../images/ico/error.gif) no-repeat 15px 0.9em;
+        border-top: 1px solid #fecfc1;
+        border-bottom: 1px solid #fecfc1;
+    }
